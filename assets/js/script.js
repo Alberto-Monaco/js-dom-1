@@ -14,5 +14,11 @@ console.log(lamp_whiteEl)
 console.log(btnEl)
 
 btnEl.addEventListener('click', function () {
-	lamp_whiteEl.src = './assets/img/yellow_lamp.png'
+	if (lamp_whiteEl.src.includes('white_lamp.png')) {
+		lamp_whiteEl.src = './assets/img/yellow_lamp.png'
+		btnEl.innerHTML = 'Spegni'
+	} else {
+		lamp_whiteEl.src = './assets/img/white_lamp.png'
+		btnEl.innerHTML = 'Accendi'
+	}
 })
