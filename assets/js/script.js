@@ -8,17 +8,17 @@
 //?E così via...
 //?Per fare questo bonus potremmo aver bisogno del metodo string.includes()
 
-const lamp_whiteEl = document.getElementById('lamp_white')
+const lampEl = document.getElementById('lamp')
 const btnEl = document.getElementById('btn')
-console.log(lamp_whiteEl)
+console.log(lampEl)
 console.log(btnEl)
 
 btnEl.addEventListener('click', function () {
-	if (lamp_whiteEl.src.includes('white_lamp.png')) {
-		lamp_whiteEl.src = './assets/img/yellow_lamp.png'
+	if (lampEl.src.includes('white_lamp.png')) {
+		lampEl.src = './assets/img/yellow_lamp.png'
 		btnEl.innerHTML = 'Spegni'
 	} else {
-		lamp_whiteEl.src = './assets/img/white_lamp.png'
+		lampEl.src = './assets/img/white_lamp.png'
 		btnEl.innerHTML = 'Accendi'
 	}
 })
